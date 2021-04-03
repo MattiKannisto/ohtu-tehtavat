@@ -1,5 +1,4 @@
 from kauppa import Kauppa
-from kirjanpito import Kirjanpito
 
 
 def main():
@@ -22,7 +21,7 @@ def main():
     kauppa.tilimaksu("Arto Vihavainen", "3425-1652")
 
     # kirjanpito
-    for tapahtuma in Kirjanpito.get_instance().tapahtumat:
+    for tapahtuma in kauppa._varasto._kirjanpito.tapahtumat:
         print(tapahtuma)
 
 
